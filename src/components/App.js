@@ -21,7 +21,7 @@ class App extends Component {
    }
     renderBallOrButton() {
 		if (this.state.renderBall) {
-		    return <div className="start" style={this.state.ballPosition}></div>
+		    return <div className="ball" style={this.state.ballPosition}></div>
 		} else {
 		    return <button onClick={this.buttonClickHandler} >Start</button>
 		}
@@ -34,7 +34,7 @@ class App extends Component {
 
     handleKeyDown(event){
         if (event.code === 'ArrowRight') {
-        
+            
           this.setState({ posi: this.state.posi + 5 }, () => {
             this.setState({ ballPosition: { left: this.state.posi + 'px' } });
           });
@@ -43,8 +43,7 @@ class App extends Component {
 
     render() {
         return (
-            <div className="playground">
-                {console.log("render")}
+            <div className="playground state">
                 {this.renderBallOrButton()}
             </div>
         )

@@ -6,7 +6,7 @@
 body html .root {
     height: 100%;
 }
-.start{
+.ball{
     background-color: black;
     box-shadow: 0 10px 10px -6px;
     position: relative;
@@ -14,4 +14,8 @@ body html .root {
     height: 50px;
     width: 50px;
     border-radius: 25px;
+}
+
+.state{
+    display: block;
 }
